@@ -78,7 +78,25 @@ If you want to view the details of the subnet we just created, you can click on 
 
 Next we will create a compute resource which allows Satellite to communicate with your vMware EXSi environemtn's vCenter.  Before creating the compute resource, you will need to create a vCenter user with permissions found in section 11.2. Creating a VMware vSphere User of [CHAPTER 11. PROVISIONING VIRTUAL MACHINES IN VMWARE VSPHERE](https://access.redhat.com/documentation/en-us/red_hat_satellite/6.9/html/provisioning_guide/provisioning_virtual_machines_in_vmware_vsphere#Provisioning_Virtual_Machines_in_VMware_vSphere-Creating_a_VMware_vSphere_User) of the Satellite 6.9 Provisioning Guide. 
 
-After you've completed creating your vCenter user id and password, run the following hammer command to create the compute resource.  
+After you've completed creating your vCenter user id and password, we will create the compute resource from the Satellite console.  We enter the following data wh when create a Compute Resource.  Click on the Compute Resouce tab in the Compute Resources | Create Compute Resource Screen
+Field Name | Value
+---------- | -----
+Name | cr-vcenter
+Provider | VMWare
+VCenter/Server | vsca01.example.com
+Username | satadmin
+Password | Passw0rd!
+Datacenter | LabDatacenter
+Distplay Typer | VMRC
+VNC Console Passwords | uncheck
+Enable Caching | check
+
+Now click on the Locations tab to make sure moline has been selected.  
+
+Now click on the Operations tab to make sure Operations Department has been selected, and the click the blue Submit button.
+
+
+
 
 ```
 # hammer compute-resource create \
@@ -101,3 +119,4 @@ Compute resource created.
 [Simple Content Access](https://access.redhat.com/articles/simple-content-access)  
 [Provisioning VMWare using userdata via Satellite 6.3-6.6](https://access.redhat.com/blogs/1169563/posts/3640721)  
 [Understanding Red Hat Content Delivery Network Repositories and their usage with Satellite 6](https://access.redhat.com/articles/1586183)
+[What user permissions/roles are required for the VMware vCenter user account to provision from Satellite 6.x?](https://access.redhat.com/solutions/1339483)

@@ -53,7 +53,7 @@ Next we will create a provisioning subnet for Operations Department organziation
 ```
 # hammer subnet create --name sn-operations-department \
 --locations moline \
---organizations "Operations Department \
+--organizations "Operations Department" \
 --domains example.com \
 --network 10.1.10.0 \
 --mask 255.255.255.0 \

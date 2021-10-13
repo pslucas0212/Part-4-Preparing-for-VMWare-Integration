@@ -68,7 +68,7 @@ Next we will create a provisioning subnet for Operations Department organziation
 Subnet created.
 ```
 
-We can view the newly created subnet by clicking going to the left navigation bar and click Infrastructure -> Submnets. 
+We can view the newly created subnet by clicking going to the left navigation bar and click Infrastructure -> Submnets.  If you don't see the newly create subnet, it's probably because you have not chosen Operations Department for the organization and moline for the location.  Check the top of the Satellite console.
 
 ![Infrastructure -> Subnets](/images/sat39.png)  
 

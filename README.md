@@ -51,12 +51,13 @@ Here's a reminder for you how to navigate in the Satellite console Domains selec
 
 Next we will create a provisioning subnet for Operations Department organziation and the moline location.  Remember that for this lab and lab environment we are using Satellite installed DHCP and DNS services on the same server where Satellite is running.
 ```
-  hammer subnet create --name operations_subnet \
+  hammer subnet create --name sn-operations-department \
   --locations moline \
   --organizations "Operations Department \
   --domains example.com \
   --network 10.1.10.0 \
   --mask 255.255.255.0 \
+  --gateway 10.1.10.1 \
   --dns-primary 10.1.10.254 \
   --from 10.1.10.149 \
   --to 10.1.10.199 \

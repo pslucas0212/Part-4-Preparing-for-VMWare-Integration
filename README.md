@@ -83,14 +83,15 @@ After you've completed creating your vCenter user id and password, run the follo
 ```
 # hammer compute-resource create \
 --caching-enabled 1 \
---datacenter "LabDatacenter" 
+--datacenter "LabDatacenter" \
 --name "cr-vcenter" \
---password "Passw0rd!"  \
+--password "Passw0rd\!" \
 --provider "Vmware" \
 --server "vsca01.example.com" \
 --user 'VSPHERE.LOCAL\satadmin' \
---locations "moline" 
+--locations "moline" \
 --organizations "Operations Department"
+Compute resource created.
 ```
 
 

@@ -49,7 +49,7 @@ Here's a reminder for you how to navigate in the Satellite console Domains selec
 
 ![Operations Domain | Selected items list](/images/sat38.png)
 
-Next we will create a provisioning subnet for Operations Department organziation and the moline location.  
+Next we will create a provisioning subnet for Operations Department organziation and the moline location.  Remember that for this lab and lab environment we are using Satellite installed DHCP and DNS services on the same server where Satellite is running.
 ```
   hammer subnet create --name operations_subnet \
   --locations moline \

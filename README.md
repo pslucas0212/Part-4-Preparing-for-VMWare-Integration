@@ -49,7 +49,22 @@ Here's a reminder for you how to navigate in the Satellite console Domains selec
 
 ![Operations Domain | Selected items list](/images/sat38.png)
 
-
+Next we will create a provisioning subnet for Operations Department organziation and the moline location.  
+```
+  hammer subnet create --name operations_subnet \
+  --locations moline \
+  --organizations "Operations Department \
+  --domains example.com \
+  --network 10.1.10.0 \
+  --mask 255.255.255.0 \
+  --dns-primary 10.1.10.254 \
+  --from 10.1.10.149 \
+  --to 10.1.10.199 \
+  --dns sat01.example.com \
+  --dhcp sat01.example.com \
+  --boot-mode DHCP \
+  --ipam DHCP
+```
 
 
 ## References  

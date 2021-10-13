@@ -19,7 +19,33 @@ On the Locations > Edit moline page, chose Domains and the click example.com in 
 
 The example.com domain will move from the All items to the Selected itmes list.  Click the blue Submit button.
 
-![Click blud Submit button](/images/sat37.png)
+![Click blud Submit button](/images/sat37.png)  
+
+We need to add the example.com domain to the Operations Department organziation.  We will do this via the command line.  First we need ID for the Operations Derpartment.
+
+```
+# hammer organization list
+---|-----------------------|-----------------------|-------------|---------------------
+ID | TITLE                 | NAME                  | DESCRIPTION | LABEL               
+---|-----------------------|-----------------------|-------------|---------------------
+1  | Default Organization  | Default Organization  |             | Default_Organization
+3  | Operations Department | Operations Department |             | operations          
+---|-----------------------|-----------------------|-------------|---------------------
+```  
+
+Now let's add the example.com domain to the Operations Department Organization
+```
+# hammer organization add-domain --domain example.com --id 3
+The domain has been associated.
+```  
+
+You will now see the update in the Red Hat Satellite console.  Remember how to navigate to Organization page for the Operations Department organziation?  Follow the same steps above that we used to naviage to the moline locations page.  Here's a reminder.  
+1. Chose Administer -> Organizations from the left side navigation bar.
+2. On the Organziations page, click the Operations Department link.
+3. Click the Domains option on the Organziations > Edit Operations Department page.
+4. You will see that the example.com domain is now in the Selected items list.  
+
+![Operations Domain | Selected items list](/images/sat38.pnt)
 
 
 

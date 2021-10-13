@@ -39,9 +39,9 @@ Now let's add the example.com domain to the Operations Department Organization
 The domain has been associated.
 ```  
 
-You will now see the update in the Red Hat Satellite console.  Remember how to navigate to Organization page for the Operations Department organziation?  Follow the same steps above that we used to naviage to the moline locations page.  
+You will now see the update in the Red Hat Satellite console.  Do you remember how to navigate to Organization page for the Operations Department organziation?  Follow the same steps above that we used to naviage to the moline locations page.  
 
-Here's a reminder how to navigate in the Satellite console Domains selection for the Operations Department organization.
+Here's a reminder for you how to navigate in the Satellite console Domains selection for the Operations Department organization.
 1. Chose Administer -> Organizations from the left side navigation bar.
 2. On the Organziations page, click the Operations Department link.
 3. Click the Domains option on the Organziations > Edit Operations Department page.

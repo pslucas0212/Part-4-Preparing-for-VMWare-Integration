@@ -45,7 +45,7 @@ You will now see the update in the Red Hat Satellite console.  Remember how to n
 3. Click the Domains option on the Organziations > Edit Operations Department page.
 4. You will see that the example.com domain is now in the Selected items list.  
 
-![Operations Domain | Selected items list](/images/sat38.pnt)
+![Operations Domain | Selected items list](/images/sat38.png)
 
 
 

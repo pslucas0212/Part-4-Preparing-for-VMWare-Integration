@@ -76,6 +76,23 @@ If you want to view the details of the subnet we just created, you can click on 
 
 ![Subnets page](/images/sat40.png)
 
+Next we will create a compute resource which allows Satellite to communicate with your vMware EXSi environemtn's vCenter.  Before creating the compute resource, you will need to create a vCenter user with permissions found in section 11.2. Creating a VMware vSphere User of [CHAPTER 11. PROVISIONING VIRTUAL MACHINES IN VMWARE VSPHERE](https://access.redhat.com/documentation/en-us/red_hat_satellite/6.9/html/provisioning_guide/provisioning_virtual_machines_in_vmware_vsphere#Provisioning_Virtual_Machines_in_VMware_vSphere-Creating_a_VMware_vSphere_User) of the Satellite 6.9 Provisioning Guide. 
+
+After you've completed creating your vCenter user id and password, run the following hammer command to create the compute resource.  
+
+```
+# hammer compute-resource create \
+--caching-enabled 1 \
+--datacenter "LabDatacenter" 
+--name "cr-vcenter" \
+--password "Passw0rd!"  \
+--provider "Vmware" \
+--server "vsca01.example.com" \
+--user 'VSPHERE.LOCAL\satadmin' \
+--locations "moline" 
+--organizations "Operations Department"
+```
+
 
 
 ## References  

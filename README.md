@@ -65,7 +65,17 @@ Next we will create a provisioning subnet for Operations Department organziation
 --dhcp sat01.example.com \
 --boot-mode DHCP \
 --ipam DHCP
+Subnet created.
 ```
+
+We can view the newly created subnet by clicking going to the left navigation bar and click Infrastructure -> Submnets. 
+
+![Infrastructure -> Subnets](/images/sat39.png)  
+
+If you want to view the details of the subnet we just created, you can click on the sn-operations-department link on the Subnets page.  
+
+![Subnets page](/images/sat40.png)
+
 
 
 ## References  

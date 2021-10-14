@@ -107,17 +107,17 @@ Click the blue Submit button to create our Compute Resource.
 
 ![Create Compute Resource](/images/sat43.png)
 
-
+Note: you can also use the following hammer command to set up the Compute Resource in Satellite
 
 ```
 # hammer compute-resource create \
 --caching-enabled 1 \
---datacenter "LabDatacenter" \
+--datacenter LabDatacenter \
 --name "cr-vcenter" \
---password "Passw0rd\!" \
---provider "Vmware" \
---server "vsca01.example.com" \
---user 'VSPHERE.LOCAL\satadmin' \
+--password Passw0rd\! \
+--provider Vmware \
+--server vsca01.example.com \
+--user "VSPHERE.LOCAL\satadmin" \
 --locations "moline" \
 --organizations "Operations Department"
 Compute resource created.

@@ -123,7 +123,21 @@ Note: you can also use the following hammer command to set up the Compute Resour
 Compute resource created.
 ```
 
+We pre-define hardware settings for a virtual machine in Satellite by creating a compute profile.  On the Satellite Console chose Infrastructure -> Compute Profiles.
 
+![Infrastructure -> Compute Profiles](/images/sat44.png)
+
+On the Compute Profiles page, click the blue Create Compute Profile button.  
+
+![Click the blue Create Compute Profile button](/images/sat45.png)
+
+On the Compute Profiles > Create Compute Profile, enter cp-vmware-small for the Name and click the blue Submit button.  
+
+![Name Compute Profile](/images/sat46.png)  
+
+On the Compute Profiles > cp-vmware-small page click the cr-vcenter link to define the new compute profile cp-vmware-small.  
+
+![Click cr-vcenter link](/images/sat47.png)
 
 ## References  
 [Installing Satellite Server from a Connected Network](https://access.redhat.com/documentation/en-us/red_hat_satellite/6.9/html/installing_satellite_server_from_a_connected_network/index)   

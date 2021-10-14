@@ -87,7 +87,8 @@ On the Compute Resources page, click the blue Create Compute Resources button.  
 ![Compute Resources - Create Compute Resources](/images/sat42.png)  
 
 
-We will enter the following data when create a Compute Resource.  Click on the Compute Resouce tab in the Compute Resources | Create Compute Resource Screen.  
+We will enter the following data when create a Compute Resource.  Click on the Compute Resouce tab in the Compute Resources | Create Compute Resource Screen.  On the Create Compute Sreen fill in the following values.  Note: After you enter the username and password, you will click the Load Datacenters button next to the Datacente field.  If your permissions, username and password are correct, you will be able to chose the target datacenter for your RHEL VM deployments.  The Load Datacenters button will not turn into a green Test Connection button.  Continue filling out the values in the Compute Resource Screen.  
+
 Field Name | Value
 ---------- | -----
 Name | cr-vcenter
@@ -100,7 +101,7 @@ Distplay Typer | VMRC
 VNC Console Passwords | uncheck
 Enable Caching | check
 
-The correct Organziaion and location should be set since we checked the choices early in the Satellite console,  If you want to review the settings, click on the Locations tab to make sure moline has been selected.  And then click on the Operations tab to make sure Operations Department has been selected.  
+The correct Organziaion and location should be set since we chose the choices earlier in the Satellite console,  If you want to review the settings, click on the Locations tab to make sure moline has been selected.  And then click on the Operations tab to make sure Operations Department has been selected.  
 
 Click the blue Submit button to create our Compute Resource.  
 

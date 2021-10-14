@@ -76,9 +76,18 @@ If you want to view the details of the subnet we just created, you can click on 
 
 ![Subnets page](/images/sat40.png)
 
-Next we will create a compute resource which allows Satellite to communicate with your vMware EXSi environemtn's vCenter.  Before creating the compute resource, you will need to create a vCenter user with permissions found in section 11.2. Creating a VMware vSphere User of [CHAPTER 11. PROVISIONING VIRTUAL MACHINES IN VMWARE VSPHERE](https://access.redhat.com/documentation/en-us/red_hat_satellite/6.9/html/provisioning_guide/provisioning_virtual_machines_in_vmware_vsphere#Provisioning_Virtual_Machines_in_VMware_vSphere-Creating_a_VMware_vSphere_User) of the Satellite 6.9 Provisioning Guide. 
+Next we will create a compute resource which allows Satellite to communicate with your vMware EXSi environemtn's vCenter.  Before creating the compute resource, you will need to create a vCenter user with permissions.  Read this article for details regarding the user id and premissions needed for Satellite to communicate to vCenter - [What user permissions/roles are required for the VMware vCenter user account to provision from Satellite 6.x?](https://access.redhat.com/solutions/1339483).  
 
-After you've completed creating your vCenter user id and password, we will create the compute resource from the Satellite console.  We enter the following data wh when create a Compute Resource.  Click on the Compute Resouce tab in the Compute Resources | Create Compute Resource Screen
+After you've completed creating your vCenter user id and password, we will create the compute resource from the Satellite console.  Make sure that you have selected Operations Department for the organization and moline for the location.  Using the navigation bar on the left of the Satellite console, click Infrastructure -> Compute Resources.  
+
+![Infrastructure -> Compute Resources](/images/sat41.png)  
+
+On the Compute Resources page, click the blue Create Compute Resources button.  
+
+![Compute Resources - Create Compute Resources](/images/sat42.png)  
+
+
+We will enter the following data when create a Compute Resource.  Click on the Compute Resouce tab in the Compute Resources | Create Compute Resource Screen.  
 Field Name | Value
 ---------- | -----
 Name | cr-vcenter
@@ -91,10 +100,11 @@ Distplay Typer | VMRC
 VNC Console Passwords | uncheck
 Enable Caching | check
 
-Now click on the Locations tab to make sure moline has been selected.  
+The correct Organziaion and location should be set since we checked the choices early in the Satellite console,  If you want to review the settings, click on the Locations tab to make sure moline has been selected.  And then click on the Operations tab to make sure Operations Department has been selected.  
 
-Now click on the Operations tab to make sure Operations Department has been selected, and the click the blue Submit button.
+Click the blue Submit button to create our Compute Resource.  
 
+![Create Compute Resource](/images/sat43.png)
 
 
 
@@ -118,5 +128,6 @@ Compute resource created.
 [Installing Satellite Server from a Connected Network](https://access.redhat.com/documentation/en-us/red_hat_satellite/6.9/html/installing_satellite_server_from_a_connected_network/index)   
 [Simple Content Access](https://access.redhat.com/articles/simple-content-access)  
 [Provisioning VMWare using userdata via Satellite 6.3-6.6](https://access.redhat.com/blogs/1169563/posts/3640721)  
-[Understanding Red Hat Content Delivery Network Repositories and their usage with Satellite 6](https://access.redhat.com/articles/1586183)
+[Understanding Red Hat Content Delivery Network Repositories and their usage with Satellite 6](https://access.redhat.com/articles/1586183). 
+[CHAPTER 11. PROVISIONING VIRTUAL MACHINES IN VMWARE VSPHERE](https://access.redhat.com/documentation/en-us/red_hat_satellite/6.9/html/provisioning_guide/provisioning_virtual_machines_in_vmware_vsphere#Provisioning_Virtual_Machines_in_VMware_vSphere-Creating_a_VMware_vSphere_User)  
 [What user permissions/roles are required for the VMware vCenter user account to provision from Satellite 6.x?](https://access.redhat.com/solutions/1339483)

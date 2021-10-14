@@ -123,7 +123,7 @@ Note: you can also use the following hammer command to set up the Compute Resour
 Compute resource created.
 ```
 
-We pre-define hardware settings for a virtual machine in Satellite by creating a compute profile.  On the Satellite Console chose Infrastructure -> Compute Profiles.
+We are going pre-define hardware settings for a virtual machine in Satellite by creating a compute profile.  On the Satellite Console chose Infrastructure -> Compute Profiles.
 
 ![Infrastructure -> Compute Profiles](/images/sat44.png)
 

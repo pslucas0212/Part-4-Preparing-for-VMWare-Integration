@@ -76,13 +76,13 @@ If you want to view the details of the subnet we just created, you can click on 
 
 ![Subnets page](/images/sat40.png)
 
-Next we will create a compute resource which allows Satellite to communicate with your vMware EXSi environemtn's vCenter.  Before creating the compute resource, you will need to create a vCenter user with permissions.  Read this article for details regarding the user id and premissions needed for Satellite to communicate to vCenter - [What user permissions/roles are required for the VMware vCenter user account to provision from Satellite 6.x?](https://access.redhat.com/solutions/1339483).  
+Next we will create a compute resource which allows Satellite to communicate with your vMware EXSi environemtn's vCenter.  Before creating the compute resource, you will need to create a vCenter user with permissions.  Read this article for details regarding the user premissions needed for Satellite to communicate to vCenter - [What user permissions/roles are required for the VMware vCenter user account to provision from Satellite 6.x?](https://access.redhat.com/solutions/1339483).  
 
-After you've completed creating your vCenter user id and password, we will create the compute resource from the Satellite console.  Make sure that you have selected Operations Department for the organization and moline for the location.  Using the navigation bar on the left of the Satellite console, click Infrastructure -> Compute Resources.  
+After you've completed creating your vCenter user id and password, we will create the compute resource from the Satellite console.  Using the navigation bar on the left of the Satellite console, click Infrastructure -> Compute Resources.  
 
 ![Infrastructure -> Compute Resources](/images/sat41.png)  
 
-On the Compute Resources page, click the blue Create Compute Resources button.  
+On the Compute Resources page, click the blue Create Compute Resources button.  Make sure that you have selected Operations Department for the organization and moline for the location.   
 
 ![Compute Resources - Create Compute Resources](/images/sat42.png)  
 

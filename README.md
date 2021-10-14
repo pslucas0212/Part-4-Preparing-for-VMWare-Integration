@@ -118,7 +118,7 @@ Note: you can also use the following hammer command to set up the Compute Resour
 --provider Vmware \
 --server vsca01.example.com \
 --user "VSPHERE.LOCAL\satadmin" \
---locations "moline" \
+--locations moline \
 --organizations "Operations Department"
 Compute resource created.
 ```

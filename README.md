@@ -93,7 +93,7 @@ Field Name | Value
 Name | cr-vcenter
 Provider | VMWare
 VCenter/Server | vsca01.example.com
-Username | satadmin
+Username | VSPHERE.LOCSAL\satadmin
 Password | Passw0rd!
 Datacenter | LabDatacenter
 Distplay Typer | VMRC

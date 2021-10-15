@@ -139,6 +139,23 @@ On the Compute Profiles > cp-vmware-small page click the cr-vcenter link to defi
 
 ![Click cr-vcenter link](/images/sat47.png)
 
+We will now define the configuration of the RHEL VM that will be provisioned to VMWare from Satellite.  We will mostly accept default values.  Configuration changes are listed in the followng table.  
+
+Name | Value
+---- | -----
+Cluster | LabCluster
+Guest OS | Red Hat Enterprise Linux 8 (64 bit)
+Virtual H/W version | 14 (EXSi 6.7)
+Create SCSI controller | VMware Paravirtual
+Datastore | LabDatastore
+Thin Provision | Uncheck
+NIC type | VNXNET3
+
+The next two screen shots show what your configuration should lokk like.  Clikc the blus Submit button when you have finished with the configuration.  You will be returned to the  Compute Profiles > cp-vmware-small page.  
+
+![cr-vmware-small config](/images/sat48.png)
+![cr-vmware-small config continued](/images/sat49.png)
+
 ## References  
 [Installing Satellite Server from a Connected Network](https://access.redhat.com/documentation/en-us/red_hat_satellite/6.9/html/installing_satellite_server_from_a_connected_network/index)   
 [Simple Content Access](https://access.redhat.com/articles/simple-content-access)  

@@ -156,6 +156,40 @@ The next two screen shots show what your configuration should lokk like.  Clikc 
 ![cr-vmware-small config](/images/sat48.png)
 ![cr-vmware-small config continued](/images/sat49.png)
 
+Finally before we move on to creating the VMware template, we finish up this session by creating a hosgroup. 
+
+Host Group Tab:
+Name | Value
+---- | -----
+Name | hg-rhel8-prem-server
+Lifecycle Environment | 
+Content View | 
+Deploy On | 
+Compute Profile | 
+
+Networkt Tab:
+Name | Value
+---- | -----
+Domain | example.com
+IPv4 Subnet | cn-operations-department
+
+Operating System Tab:
+Name | Value
+---- | -----
+Architecture | x86_64
+
+```
+# hammer hostgroup create \
+--name hg-rhel8-prem-server \
+--operatingsystem "Red Hat 8.3" \
+--subnet sn-operations-department \
+--domain example.com \
+--architecture x86_64 \
+--compute-profile cp-vmware-small \
+
+
+```
+
 ## References  
 [Installing Satellite Server from a Connected Network](https://access.redhat.com/documentation/en-us/red_hat_satellite/6.9/html/installing_satellite_server_from_a_connected_network/index)   
 [Simple Content Access](https://access.redhat.com/articles/simple-content-access)  

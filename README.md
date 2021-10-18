@@ -122,7 +122,7 @@ Note: you can also use the following hammer command to set up the Compute Resour
 --organizations "Operations Department"
 Compute resource created.
 ```
-
+## Move this section to after the VM creation VMWare....
 We are going pre-define hardware settings for a virtual machine in Satellite by creating a compute profile.  On the Satellite Console chose Infrastructure -> Compute Profiles.
 
 ![Infrastructure -> Compute Profiles](/images/sat44.png)
@@ -146,26 +146,29 @@ Name | Value
 Cluster | LabCluster
 Guest OS | Red Hat Enterprise Linux 8 (64 bit)
 Virtual H/W version | 14 (EXSi 6.7)
+Image | img-rhel8-prem-server
 Create SCSI controller | VMware Paravirtual
 Datastore | LabDatastore
+Size(GB) | 20 GB
 Thin Provision | Uncheck
 NIC type | VNXNET3
+Network | VM Network
 
-The next two screen shots show what your configuration should lokk like.  Clikc the blus Submit button when you have finished with the configuration.  You will be returned to the  Compute Profiles > cp-vmware-small page.  
+The next two screen shots show what your configuration should look like.  Click the blue Submit button when you have finished with the configuration.  You will be returned to the  Compute Profiles > cp-vmware-small page.  
 
 ![cr-vmware-small config](/images/sat48.png)
 ![cr-vmware-small config continued](/images/sat49.png)
 
-Finally before we move on to creating the VMware template, we finish up this session by creating a hosgroup. 
+We finish up this session by creating a hosgroup. 
 
 Host Group Tab:
 Name | Value
 ---- | -----
 Name | hg-rhel8-prem-server
-Lifecycle Environment | 
-Content View | 
-Deploy On | 
-Compute Profile | 
+Lifecycle Environment | le-ops-rhel8-prem-server
+Content View | cv-rhel8-prem-server
+Deploy On | cr-vcenter
+Compute Profile | cp-vmware-small
 
 Networkt Tab:
 Name | Value
@@ -177,6 +180,13 @@ Operating System Tab:
 Name | Value
 ---- | -----
 Architecture | x86_64
+Operating System | RedHt 8.3
+Password | Passw0rd!
+
+Check the Locations and Organziations tab to make sure that moline is set for Locations and Operations Department is set for Organizations.  
+
+Set the activation key to ak-ops-rhel8-prem-server
+
 
 ```
 # hammer hostgroup create \

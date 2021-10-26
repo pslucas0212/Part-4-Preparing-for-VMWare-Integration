@@ -49,6 +49,18 @@ Here's a reminder for you how to navigate in the Satellite console Domains selec
 
 ![Operations Domain | Selected items list](/images/sat38.png)
 
+Before we create provisioning submet, we need the id of our satellite server's embedded capsule server.  The id is likely to be '1', but we will check anyway.
+
+```
+# hammer capsule list
+---|-------------------|--------------------------------|--------------------------
+ID | NAME              | URL                            | FEATURES                 
+---|-------------------|--------------------------------|--------------------------
+1  | sat01.example.com | https://sat01.example.com:9090 | Discovery, Dynflow, An...
+---|-------------------|--------------------------------|--------------------------
+```
+We will use the id from hammer capsule list command to enable our satellite instance for remote execution.
+
 Next we will create a provisioning subnet for Operations Department organziation and the moline location.  Remember that for this lab and lab environment we are using Satellite installed DHCP and DNS services on the same server where Satellite is running.
 ```
 # hammer subnet create --name sn-operations-department \
@@ -64,7 +76,8 @@ Next we will create a provisioning subnet for Operations Department organziation
 --dns sat01.example.com \
 --dhcp sat01.example.com \
 --boot-mode DHCP \
---ipam DHCP
+--ipam DHCP \
+--remote-execution-proxy-ids 1
 Subnet created.
 ```
 

@@ -49,6 +49,10 @@ Here's a reminder for you how to navigate in the Satellite console Domains selec
 
 ![Operations Domain | Selected items list](/images/sat38.png)
 
+
+Satellite will be updating our DNS records when we provision a VM from Satellite.  The reverse DNS zone record update is defined when we create a provioning subnet.  And the forward DNS zone record update is defined with the domain.  Let's create the provisioning subnet first.
+
+
 Before we create provisioning submet, we need the id of our satellite server's embedded capsule server.  The id is likely to be '1', but we will check anyway.
 
 ```
@@ -88,6 +92,20 @@ We can view the newly created subnet by clicking going to the left navigation ba
 If you want to view the details of the subnet we just created, you can click on the sn-operations-department link on the Subnets page.  
 
 ![Subnets page](/images/sat40.png)
+
+Let's update the domain configuration so Satellite can update the forward DNS zone records when we provision a VM from Satellite.  
+
+On the left navigation bar choose Infrastructure -> Domains
+
+![Inftrastucture -> Domains](/images/sat67.png)
+
+On the Domains page click on the example.com link.  
+
+![Domains -> example.com link](/images/sat68.png)  
+
+On the Domains > Edit example.com make sure you are on the Domain tab and click DNS Capsule drop down list.  Choose sat01.example.com and click the blue Submit button.
+
+![DNS Capsule -> sat01.example.com -> submit](/images/sat69.png)
 
 Next we will create a compute resource which allows Satellite to communicate with your vMware EXSi environemtn's vCenter.  Before creating the compute resource, you will need to create a vCenter user with permissions.  Read this article for details regarding the user premissions needed for Satellite to communicate to vCenter - [What user permissions/roles are required for the VMware vCenter user account to provision from Satellite 6.x?](https://access.redhat.com/solutions/1339483).  
 

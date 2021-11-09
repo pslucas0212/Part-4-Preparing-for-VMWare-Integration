@@ -153,6 +153,7 @@ Note: you can also use the following hammer command to set up the Compute Resour
 --organizations "Operations Department"
 Compute resource created.
 ```
+This completes are preparation work for using vCenter with Satellite to provision VMs.  
 
 ## References  
 [Installing Satellite Server from a Connected Network](https://access.redhat.com/documentation/en-us/red_hat_satellite/6.9/html/installing_satellite_server_from_a_connected_network/index)   

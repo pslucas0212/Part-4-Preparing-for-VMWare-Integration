@@ -85,7 +85,7 @@ Next we will create a provisioning subnet for Operations Department organization
 Subnet created.
 ```
 
-We can view the newly created subnet by clicking going to the left navigation bar and click Infrastructure -> Subnets.  If you don't see the newly created subnet, it's probably because you have not chosen the Operations Department for the organization and moline for the location.  Check the top of the Satellite console.
+We can view the newly created subnet by  going to the side menu and then choose Infrastructure -> Subnets.  If you don't see the newly created subnet, it's probably because you have not chosen the Operations Department for the organization and moline for the location.  Check the top of the Satellite console.
 
 ![Infrastructure -> Subnets](/images/sat39.png)  
 
@@ -95,7 +95,7 @@ If you want to view the details of the subnet we just created, you can click on 
 
 Let's update the domain configuration so Satellite can update the forward DNS zone records when we provision a VM from Satellite.  
 
-On the left navigation bar choose Infrastructure -> Domains
+On the side menu choose Infrastructure -> Domains
 
 ![Inftrastucture -> Domains](/images/sat67.png)
 
